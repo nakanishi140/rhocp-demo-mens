@@ -59,7 +59,7 @@ router.get('/mens', function (request, response) {
     tmp25.id = "25";
     tmp25.image = "store-984393_1920.jpg";
     tmp25.headline = "全てのアイテムをあなたに";
-    tmp25.sub_headline = "UG Men'sはビジネス・ファッションに必要な全てを届けます";
+    tmp25.sub_headline = "UG Mensはビジネス・ファッションに必要な全てを届けます";
     
     
     tmp26.id = "26";
