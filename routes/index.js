@@ -19,7 +19,7 @@ const router = express.Router();
 router.get('/mens', function (request, response) {
   
   let totalmeta = {};
-  totalmeta.title = "UG-STYLE:Result";
+  totalmeta.title = "UG-Men's Home";
   totalmeta.cds = process.env.CDS_HOME;
   
   let totalrr = {};
