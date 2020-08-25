@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ja" >
   <head>
-    <title>Product example for Bootstrap · Bootstrap</title>
+    <title><%=meta.title %> </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="product.css" rel="stylesheet">
         <style type="text/css">
@@ -83,7 +83,7 @@
 
           
 .main-back {
-  background-image: url("/public/images/black-and-white-1281562_1920.jpg");
+  background-image: url("<%=meta.cds%>/images/black-and-white-1281562_1920.jpg");
   background-size: cover;
 }
 
@@ -131,7 +131,7 @@
       <h2 class="display-5"><%=obj.headline%></h2>
       <p class="lead"><%=obj.sub_headline%></p>
     </div>
-    <image src="public/images/<%=obj.image%>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0; object-fit: cover;"></image>
+    <image src="<%=meta.cds%>/images/<%=obj.image%>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0; object-fit: cover;"></image>
   </div>
   <%}%>
   <% i++;if (1 == i%2 && i<result.json.length) { var obj = result.json[i];%>
@@ -140,7 +140,7 @@
       <h2 class="display-5"><%=obj.headline%></h2>
       <p class="lead"><%=obj.sub_headline%></p>
     </div>
-    <image src="public/images/<%=obj.image%>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0; object-fit: cover;"></image>
+    <image src="<%=meta.cds%>/images/<%=obj.image%>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0; object-fit: cover;"></image>
   </div>
   <%}%>
 
