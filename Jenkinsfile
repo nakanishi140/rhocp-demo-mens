@@ -22,7 +22,7 @@ pipeline {
           openshift.withCluster() {
             openshift.withProject() {
               echo "Build Appliction Image: mens"
-              def bc = openshift.selector("bc", "mens")
+              def bc = openshift.selector("bc", "mens-v10")
               bc.startBuild().logs("-f")
               def bb = bc.narrow("bc").related("builds")
               timeout(10) {
@@ -35,13 +35,14 @@ pipeline {
         }
       }
     }
-    stage("create tag") {
+    stage('deploy') {
       steps {
         script {
           openshift.withCluster() {
             openshift.withProject() {
-              echo "Create Tag Image: mens"
-              openshift.tag("mens:1.0")
+              sh "oc rollout restart deployment/mens-v10"
+                timeout(10) {
+              }
             }
           }
         }
